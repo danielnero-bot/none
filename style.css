@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Rajdhani', 'Orbitron', sans-serif;
+}
+
+:root {
+  /* CSS HSL */
+  --black: hsla(0, 0%, 0%, 1);
+  --charcoal: hsla(200, 26%, 25%, 1);
+  --paynes-gray: hsla(202, 17%, 42%, 1);
+  --light-blue: hsla(177, 33%, 79%, 1);
+  --ghost-white: hsla(240, 29%, 97%, 1);
+  --green: #058c42;
+  --neon-blue: rgb(0, 245, 255);
+  --cyber-purple: #6a0dad;
+  --matrix-green: #00ff41;
+  --glow: 0 0 10px var(--neon-blue);
+}
+
+body {
+  background-color: var(--black);
+  color: var(--ghost-white);
+}
+header {
+  padding: 20px;
+  border-bottom: 1px solid var(--paynes-gray);
+}
+
+nav > ul {
+  display: flex;
+  list-style: none;
+}
+nav > ul > li:first-child {
+  margin-right: auto;
+  font-size: 2rem;
+  color: var(--matrix-green);
+}
+nav>ul>li:last-child{
+  display: none;
+}
+nav > ul > li {
+  margin: 0 20px;
+  font-size: 1.5rem;
+}
+nav > ul > li > a {
+  text-decoration: none;
+  color: var(--ghost-white);
+}
+nav > ul > li > a:hover {
+  border-bottom: 2px solid var(--paynes-gray);
+  border-radius: 1px;
+  cursor: pointer;
+}
+.info > h1 {
+  color: var(--green);
+  text-transform: uppercase;
+}
+.flexbox {
+  display: flex;
+}
+.img {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+}
+.img > img {
+  width: 100%;
+  height: 100%;
+}
+.info {
+  width: 50%;
+  padding: 20px;
+}
+
+
+h1, h2, h3 {
+  color: var(--neon-blue);
+  text-shadow: var(--glow);
+}
+
+a {
+  color: var(--matrix-green);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  text-shadow: var(--glow);
+}
+
+.tagline {
+  font-size: 1.5rem;
+  border-left: 3px solid var(--cyber-purple);
+  padding-left: 1rem;
+  margin: 1rem 0 2rem;
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+li {
+  margin-bottom: 0.8rem;
+}
+
+.highlight {
+  color: var(--neon-blue);
+  font-weight: bold;
+}
+.menu{
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100vh;
+  background-color: var(--black);
+  z-index: 1;
+}
+.menu ul{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.menu ul li{
+  list-style: none;
+  border-bottom: 1px solid var(--paynes-gray);
+}
+.menu.show{
+  display: block;
+}
+
+@media screen and (max-width:600px) {
+  header{
+    padding: 1rem;
+  }
+  .hidden{
+    display: none;
+  }
+  nav>ul>li:last-child{
+    display: block;
+    padding-top: 6px;
+  }
+  .flexbox{
+    flex-direction: column;
+  }
+  .info{
+    width: 100%;
+  }
+  .img{
+    width: 100%;
+  } 
+}
