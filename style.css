@@ -31,6 +31,7 @@ header {
 nav > ul {
   display: flex;
   list-style: none;
+  justify-content: center;
 }
 nav > ul > li:first-child {
   margin-right: auto;
@@ -123,6 +124,8 @@ li {
   display: flex;
   flex-direction: column;
   height: 100%;
+  padding: 1rem;
+  margin-left: -10px;
 }
 .menu ul li{
   list-style: none;
@@ -130,6 +133,11 @@ li {
 }
 .menu.show{
   display: block;
+}
+.menu ul li:first-child{
+  padding-bottom: 2rem;
+  border-bottom: none;
+  margin-left: auto;
 }
 
 @media screen and (max-width:600px) {
