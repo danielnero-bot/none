@@ -82,7 +82,7 @@ h1, h2, h3 {
 }
 
 a {
-  color: var(--matrix-green);
+  /* color: var(--matrix-green); */
   text-decoration: none;
   transition: 0.3s;
 }
@@ -127,6 +127,10 @@ li {
   padding: 1rem;
   margin-left: -10px;
 }
+.menu>ul>li>a{
+  color: var(--ghost-white);
+  width: 100%;
+}
 .menu ul li{
   list-style: none;
   border-bottom: 1px solid var(--paynes-gray);
@@ -160,4 +164,10 @@ li {
   .img{
     width: 100%;
   } 
+  .menu>ul>li>a:hover{
+    border: 1px solid var(--glow);
+    color: var(--glow);
+    padding: 1rem;
+    transition: .8s linear;
+  }
 }
